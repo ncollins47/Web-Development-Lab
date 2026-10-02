@@ -1,6 +1,9 @@
 import streamlit as st
 import info
 import pandas as pd
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 def about_me():
     st.header("About Me")
@@ -63,7 +66,13 @@ def experience_section(experience_data):
 
     for job_title, (job_description, image) in experience_data.items():
         expander = st.expander(job_title)
-        expander.image(image, width=250)
+
+        image_path = BASE_DIR / image
+        if image_path.exists():
+            expander.image(str(image_path), width=250)
+        else:
+            expander.warning(f"Missing image: {image_path}")
+
         for bullet in job_description:
             expander.write(bullet)
             
@@ -111,18 +120,30 @@ def activities_section(leadership_data, activity_data):
     with tab1:
         st.subheader("Leadership")
 
-        for title, (details, image) in leadership_data.items():
+      for title, (details, image) in leadership_data.items():
             expander = st.expander(title)
-            expander.image(image, width=250)
+
+            image_path = BASE_DIR / image
+            if image_path.exists():
+                expander.image(str(image_path), width=250)
+            else:
+                expander.warning(f"Missing image: {image_path}")
+
             for bullet in details:
                 expander.write(bullet)
-
 
     with tab2:
         st.subheader("Community Service")
 
-        for title, details in activity_data.items():
+        for title, (details, image) in leadership_data.items():
             expander = st.expander(title)
+
+            image_path = BASE_DIR / image
+            if image_path.exists():
+                expander.image(str(image_path), width=250)
+            else:
+                expander.warning(f"Missing image: {image_path}")
+
             for bullet in details:
                 expander.write(bullet)
 
