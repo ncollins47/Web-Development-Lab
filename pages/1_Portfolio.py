@@ -43,7 +43,6 @@ def education_section(education_data, course_data):
     st.subheader("Coursework")
 
     coursework = pd.DataFrame(course_data)
-
     st.dataframe(coursework, column_config={
 
         "code": "Course Code",
