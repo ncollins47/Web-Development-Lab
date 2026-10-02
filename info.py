@@ -8,7 +8,7 @@ about_me = "I'm Nalani Collins. I go to Georgia Tech and work as a barista at Wh
 
 #CHANGE BELOW
 linkedin_image_url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWboTlLcoXOKF6lwH8OW6rbAgJJHJxEpv8zV1tWfKoSE3p5OhOdx17aN0&s=10"
-github_image_url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPYTQA7o39XCl5bBfL4zHBk_NiIBJigxx8LiRROqyDYg&s=10"
+github_image_url = "https://github.com/ncollins47"
 email_image_url = "https://static.vecteezy.com/system/resources/previews/022/647/958/non_2x/email-icon-for-your-website-mobile-presentation-and-logo-design-free-vector.jpg"
 
 #CHANGE BELOW
