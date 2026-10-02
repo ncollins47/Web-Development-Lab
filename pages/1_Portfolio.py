@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 def about_me():
     st.header("About Me")
-    st.image(info.profile_picture, width=200)
+    st.image(str(BASE_DIR / info.profile_picture), width=200)
     st.write(info.about_me)
     st.write("---")
 
@@ -112,14 +112,12 @@ def activities_section(leadership_data, activity_data):
 
     st.header("Activities")
 
-
     tab1, tab2 = st.tabs(["Leadership", "Community Service"])
-
 
     with tab1:
         st.subheader("Leadership")
 
-      for title, (details, image) in leadership_data.items():
+        for title, (details, image) in leadership_data.items():
             expander = st.expander(title)
 
             image_path = BASE_DIR / image
@@ -134,17 +132,9 @@ def activities_section(leadership_data, activity_data):
     with tab2:
         st.subheader("Community Service")
 
-        for title, (details, image) in leadership_data.items():
+        for title, details in activity_data.items():
             expander = st.expander(title)
-
-            image_path = BASE_DIR / image
-            if image_path.exists():
-                expander.image(str(image_path), width=250)
-            else:
-                expander.warning(f"Missing image: {image_path}")
-
             for bullet in details:
                 expander.write(bullet)
 
 activities_section(info.leadership_data, info.activity_data)
-
