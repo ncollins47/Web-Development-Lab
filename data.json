@@ -1,0 +1,12 @@
+{
+    "chart_title": "Laufey Albums",
+    "data_points": [
+        {"label": "Typical of Me", "year": 2021, "tracks": 7, "minutes": 21, "image": "Images/typical_of_me.jpg"},
+        {"label": "Everything I Know About Love", "year": 2022, "tracks": 13, "minutes": 45, "image": "Images/everything_i_know_about_love.jpg"},
+        {"label": "Bewitched", "year": 2023, "tracks": 14, "minutes": 48, "image": "Images/bewitched.jpg"},
+        {"label": "A Night at the Symphony", "year": 2023, "tracks": 14, "minutes": 51, "image": "Images/a_night_at_the_symphony.jpg"},
+        {"label": "A Night at the Symphony: Live at the Hollywood Bowl", "year": 2024, "tracks": 15, "minutes": 54, "image": "Images/hollywood_bowl.jpg"},
+        {"label": "A Matter of Time", "year": 2025, "tracks": 14, "minutes": 45, "image": "Images/a_matter_of_time.jpg"},
+        {"label": "A Very Laufey Holiday: The Santa Claus Is Comin' To Town Edition", "year": 2025, "tracks": 6, "minutes": 19, "image": "Images/a_very_laufey_holiday.jpg"}
+    ]
+}
