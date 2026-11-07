@@ -101,7 +101,6 @@ st.divider()
 st.header("🎤 Listener Survey Results")
 st.caption("Live data from the Survey page (data.csv).")
 
-# ---------- load the CSV ----------
 try:
     survey_df = pd.read_csv("data.csv")
 except (FileNotFoundError, pd.errors.EmptyDataError):
@@ -110,7 +109,7 @@ except (FileNotFoundError, pd.errors.EmptyDataError):
 if survey_df.empty:
     st.info("No survey responses yet. Head to the Survey page and add some!")
 else:
-    # ---------- fun metric cards ----------
+    #fun metric cards
     top_album = survey_df["favorite_album"].mode()[0]
     top_word = survey_df["vibe_word"].mode()[0]
     c1, c2, c3 = st.columns(3)
@@ -126,9 +125,7 @@ else:
     }
     palette_names = list(PALETTES)
 
-    # ------------------------------------------------------------------
-    # STATIC VISUALISATION: donut chart (fixed, no user input)
-    # ------------------------------------------------------------------
+   
     st.subheader("Which album do listeners play the most?")
     album_counts = survey_df["favorite_album"].value_counts().reset_index()
     album_counts.columns = ["Album", "Listeners"]
@@ -152,9 +149,7 @@ else:
 
     st.divider()
 
-    # ------------------------------------------------------------------
-    # DYNAMIC VISUALISATION: bar chart + radio + session state palette
-    # ------------------------------------------------------------------
+
     st.subheader("How long do different listeners listen?")
 
     # session state: remembers which palette is active between clicks
